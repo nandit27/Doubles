@@ -1,0 +1,111 @@
+.leaderboard {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  z-index: 90;
+}
+
+.leaderboard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scores-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  position: relative;
+}
+
+.rank {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #888;
+  margin-right: 1rem;
+  min-width: 30px;
+}
+
+.player-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-weight: 500;
+  color: #fff;
+}
+
+.score {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.new-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(45deg, #ff4081, #ff0000);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Scrollbar styling */
+.scores-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scores-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.scores-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.scores-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .leaderboard {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+  }
+}
+
+.no-scores {
+  text-align: center;
+  color: #888;
+  padding: 1rem;
+  font-style: italic;
+} 
